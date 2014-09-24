@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 2.1.2
+addons:
+  postgresql: '9.3'
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: OSj3Zz4K3D1yQSbiihz3kyRnw9FVQYzfLKYGIXNUXVjuzujGfhD2MYRmh/PDNR4v1mGsYfI/JfgM3pUnIDz+47wqTWrUfswfcc1V7RMJR/9fZOroRN1uYrMT9upK3V0EN0sS+lDpE14MLc6WPfWwZ0p7mlkdFf78DMuG1ltF5gU=
+  app: whispering-waters-1220
+  on:
+    repo: YoshikiEguchi/team_exercise2
