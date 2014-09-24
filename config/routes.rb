@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'exercise_infos#index'
+  root 'daily_exercise#index'
   resources :exercise_infos
+  get '/daily_exercise/input' => 'daily_exercise#input'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

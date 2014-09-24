@@ -1,0 +1,2 @@
+module DailyExeciseHelper
+end
