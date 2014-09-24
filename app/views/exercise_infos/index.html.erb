@@ -1,0 +1,27 @@
+<h1>Listing exercise_infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Calorie</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercise_infos.each do |exercise_info| %>
+      <tr>
+        <td><%= exercise_info.exercise %></td>
+        <td><%= exercise_info.calorie %></td>
+        <td><%= link_to 'Show', exercise_info %></td>
+        <td><%= link_to 'Edit', edit_exercise_info_path(exercise_info) %></td>
+        <td><%= link_to 'Destroy', exercise_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exercise info', new_exercise_info_path %>
