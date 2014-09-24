@@ -1,0 +1,5 @@
+<h1>Input the exicise you did today with consumed time</h1>
+<form accept-charset="UTF-8" action="/daily_exercise/input" method="get">
+	<%= collection_select(:input_data,:execise_info_id, @exercise_infos, :id, :exercise) %>
+	<input type="text" id="input_data_time" name="input_data[time]"></input>分
+</form>
