@@ -23,39 +23,11 @@ ActiveRecord::Schema.define(version: 20140924080958) do
     t.datetime "updated_at"
   end
 
-  create_table "daily_infos", force: true do |t|
-    t.integer  "exercise_id"
-    t.integer  "consumed_minutes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "exercise_infos", force: true do |t|
     t.string   "exercise"
     t.integer  "calorie"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "exercises", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "profiles", force: true do |t|
-    t.string   "sex"
-    t.integer  "age"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "used_calorie_infos", force: true do |t|
-    t.integer  "used_calorie"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "profile_id"
-    t.integer  "exercise_id"
   end
 
 end
