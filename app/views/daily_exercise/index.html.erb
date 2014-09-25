@@ -2,6 +2,7 @@
 <form accept-charset="UTF-8" action="/daily_exercise/input" method="get">
 	<%= collection_select(:input_data,:execise_info_id, @exercise_infos, :id, :exercise) %>
 	<input type="number" id="input_data_time" name="input_data[time]"></input>分
+<input type="submit" value="送信する">
 </form>
 <a href = "http://whispering-waters-1220.herokuapp.com/exercise_infos/new"> create new exercise </a>
 
